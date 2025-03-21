@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aesthetic Scientific Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="calculator">
+        <div class="theme-switcher">
+            <button onclick="switchTheme()">🌙</button>
+            <select id="themeSelect" onchange="changeTheme()">
+                <option value="dark">🕶️</option>
+                <option value="neon">✨</option>
+                <option value="retro">📼</option>
+                <option value="minimal">🪶</option>
+            </select>
+        </div>
+        <input type="text" id="display" readonly>
+        <div class="buttons">
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="appendCharacter('(')">(</button>
+            <button onclick="appendCharacter(')')">)</button>
+            <button onclick="deleteLast()">⌫</button>
+
+            <button onclick="appendCharacter('7')">7</button>
+            <button onclick="appendCharacter('8')">8</button>
+            <button onclick="appendCharacter('9')">9</button>
+            <button onclick="appendCharacter('/')">÷</button>
+
+            <button onclick="appendCharacter('4')">4</button>
+            <button onclick="appendCharacter('5')">5</button>
+            <button onclick="appendCharacter('6')">6</button>
+            <button onclick="appendCharacter('*')">×</button>
+
+            <button onclick="appendCharacter('1')">1</button>
+            <button onclick="appendCharacter('2')">2</button>
+            <button onclick="appendCharacter('3')">3</button>
+            <button onclick="appendCharacter('-')">−</button>
+
+            <button onclick="appendCharacter('0')">0</button>
+            <button onclick="appendCharacter('.')">.</button>
+            <button onclick="calculateResult()">=</button>
+            <button onclick="appendCharacter('+')">+</button>
+
+            <!-- Scientific Functions -->
+            <button onclick="appendCharacter('Math.sin(')">sin</button>
+            <button onclick="appendCharacter('Math.cos(')">cos</button>
+            <button onclick="appendCharacter('Math.tan(')">tan</button>
+            <button onclick="appendCharacter('Math.log10(')">log</button>
+
+            <button onclick="appendCharacter('Math.sqrt(')">√</button>
+            <button onclick="appendCharacter('Math.pow(')">xʸ</button>
+            <button onclick="appendCharacter('Math.PI')">π</button>
+            <button onclick="appendCharacter('Math.E')">e</button>
+        </div>
+    </div>
+    <footer>
+        <div class="contact-info">
+            <p>Contact Info:</p>
+            <p>Phone: <a href="tel:+9600205581">9600205581</a></p>
+            <p>Email: <a href="mailto:akashka688@gmail.com">akashka688@gmail.com</a></p>
+            <p>GitHub: <a href="https://github.com/akashka005" target="_blank">akashka005</a></p>
+            <div class="contact-buttons">
+                <button><a href="mailto:akashka688@gmail.com">Email</a></button>
+                <button><a href="tel:+9600205581">Call</a></button>
+                <button><a href="https://github.com/akashka005" target="_blank">GitHub</a></button>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

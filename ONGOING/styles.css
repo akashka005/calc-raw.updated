@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Orbitron', sans-serif;
+    transition: background 0.5s ease-in-out;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.calculator {
+    width: 320px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #333;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    animation: popIn 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+#display {
+    width: 100%;
+    height: 50px;
+    font-size: 22px;
+    text-align: right;
+    padding: 8px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease-in-out, background 0.3s, color 0.3s;
+}
+
+#display:focus {
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.3);
+}
+
+button:active {
+    transform: scale(0.9);
+    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.4);
+}
+.theme-switcher {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.theme-switcher button {
+    padding: 4px;
+    font-size: 18px;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+.theme-switcher button:hover {
+    opacity: 0.7;
+}
+
+.theme-switcher button:active {
+    transform: scale(0.9);
+}
+
+body.dark {
+    background-color: #222;
+}
+
+.dark .calculator {
+    background-color: #333;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+    animation: neonPulse 2s infinite alternate;
+}
+
+.dark #display {
+    background-color: #000;
+    color: #0f0;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.6);
+}
+
+body.neon {
+    background-color: #111;
+}
+
+.neon .calculator {
+    background-color: #000;
+    box-shadow: 0 0 20px #0ff;
+    animation: neonPulse 2s infinite alternate;
+}
+
+.neon #display {
+    background-color: #002244;
+    color: #0ff;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+}
+
+body.retro {
+    background-color: #F4A261;
+}
+
+.retro .calculator {
+    background-color: #264653;
+    box-shadow: 0 0 15px rgba(244, 162, 97, 0.5);
+    border: 4px solid #F4A261;
+}
+
+.retro #display {
+    background-color: #264653;
+    color: #F4A261;
+    box-shadow: 0 0 12px rgba(244, 162, 97, 0.8);
+    border: 2px dashed #E76F51;
+}
+
+.retro button {
+    font-family: 'Press Start 2P', cursive;
+    border: 2px solid #E76F51;
+}
+
+body.minimal {
+    background-color: #f7f7f7;
+}
+
+.minimal .calculator {
+    background-color: #fff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.minimal #display {
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 0 8px rgba(100, 100, 100, 0.5);
+}
+
+@keyframes neonPulse {
+    from {
+        box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.5);
+    }
+    to {
+        box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.8);
+    }
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #ccc;
+}
+
+footer .contact-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+footer .contact-info p {
+    font-size: 16px;
+    color: #ddd;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.contact-buttons button {
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.contact-buttons button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.contact-buttons button:active {
+    transform: scale(0.95);
+}
+
+footer .contact-info a {
+    font-size: 20px;
+    color: #0ff;
+    text-decoration: none;
+}
+
+footer .contact-info a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    .calculator {
+        width: 90%;
+        max-width: 400px;
+        padding: 15px;
+    }
+
+    #display {
+        width: 100%;
+        height: 60px;
+        font-size: 24px;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .buttons {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+    }
+
+    button {
+        padding: 20px; 
+        font-size: 22px;
+        height: 50px;
+    }
+
+    .theme-switcher {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .theme-switcher button {
+        padding: 8px;
+        font-size: 24px;
+        width: 40px;
+        height: 40px;
+    }
+    footer .contact-info p,
+    footer .contact-info a {
+        font-size: 14px;
+    }
+
+    .contact-buttons button {
+        font-size: 18px;
+        padding: 12px 25px;
+    }
+}
+
+@media (max-width: 800px) and (orientation: landscape) {
+    .calculator {
+        width: 70%;
+    }
+
+    button {
+        padding: 18px;
+        font-size: 20px;
+    }
+
+    #display {
+        font-size: 26px;
+    }
+}
